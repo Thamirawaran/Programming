@@ -5,6 +5,6 @@ can add(n: int) -> int {
 }
 
 
-with entry:__main__ {
+with entry {
     print(add(5));
 }
