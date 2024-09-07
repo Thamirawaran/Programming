@@ -10,6 +10,6 @@
       3. [Is-Prime](https://github.com/Thamirawaran/Programming/blob/main/Jac%20Programming/Basic%20Problems/Is_Prime.jac)
       4. [Odd_Even](https://github.com/Thamirawaran/Programming/blob/main/Jac%20Programming/Basic%20Problems/Odd_Even.jac)
    3. [Projects](https://github.com/Thamirawaran/Programming/tree/main/Jac%20Programming/Projects)
-      1. [Rock_Paper_Scissors](https://github.com/Thamirawaran/Programming/blob/main/Jac%20Programming/Projects/Rock_Paper_Scissors.jac)
+      1. [Rock_Paper_Scissors_Game](https://github.com/Thamirawaran/Programming/blob/main/Jac%20Programming/Projects/Rock_Paper_Scissors.jac)
    
 3. [C++](https://github.com/Thamirawaran/Programming/tree/main/Cpp%20Programming)
