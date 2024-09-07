@@ -50,7 +50,7 @@ obj RockPaperScissors :Game: {
     }
 
     can process_choice(player_choice: str, computer_choice: str) {
-        print(f"Computer chose: {computer_choice}");
+        print(f"Computer chose: {computer_choice} and You chose: {player_choice}");
 
         if player_choice == computer_choice {
             print("It's a tie!");
