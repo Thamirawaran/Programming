@@ -1,4 +1,4 @@
-# In this repository, I have added problems and projects I have worked on. I have learned C++, Python languages. And I have started to study Jac language. 
+# In this repository contains syntax examples, example projects on python, Jac, and C++ languages. 
 
 # Languages
 1. [Python](https://github.com/Thamirawaran/Programming/tree/main/Python%20Programming)
