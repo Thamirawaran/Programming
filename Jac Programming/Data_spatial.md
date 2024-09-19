@@ -68,4 +68,22 @@
       }
   ```
 
+- How to connect list of nodes with a single node in series
+  ```jac
+      node_1 ++> node_list[0];
+      for i to i < length(node_list) by i+=1 {
+          node_list[i] ++> node_list[i+1];
+      }
+  ```
+  
+- How to connect list of nodes with a single node in parallel
+  ```jac
+      node_1 ++> node_list;
+  ```
+
+- How to make mesh with two list of nodes
+  ```jac
+      node_list_1 ++> node_list_2;
+  ``` 
+
 
