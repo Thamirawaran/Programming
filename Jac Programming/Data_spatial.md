@@ -35,16 +35,16 @@
   
 - How to delete a node?
 
-- How to delete connection between two nodes?
+- How to delete connection/edge between two nodes?
   ```jac
     node_1 del --> node_2;
   ```
 - How to connect list of nodes with single or list of nodes?
-```jac
-    for nodes in list_nodes{
-       node_1 ++> nodes; 
-    }
-```
+  ```jac
+      for nodes in list_nodes{
+         node_1 ++> nodes; 
+      }
+  ```
 
 - What is walker and how to define a walker?
   - It is used to define archetypes that perform actions or traverse nodes and edges within a graph.
@@ -55,17 +55,17 @@
     ```
 
 - How to get all the visitable nodes from a node/ list of nodes?
-```jac
-    walker {
-        visit [-->];
-        print(here);
-}
-```
-- How to get all edges that is connected between nodes?
-```jac
-    walker {
-        print(here.edges());
+    ```jac
+        walker {
+            visit [-->];
+            print(here);
     }
-```
+    ```
+- How to get all edges that is connected between nodes?
+  ```jac
+      walker {
+          print(here.edges());
+      }
+  ```
 
 
