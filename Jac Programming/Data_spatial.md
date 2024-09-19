@@ -28,7 +28,7 @@
   ```jac
     # connect without specifying property value
     node_1 +: edge_name :+> node_2;
-    # connect with specifying property value
+    # connect with specific property value
     node_1 +: edge_name :edge_property= 15: +> node_2; 
   ```
   
