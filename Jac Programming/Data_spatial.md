@@ -48,10 +48,10 @@
 
 - What is walker and how to define a walker?
   - It is used to define archetypes that perform actions or traverse nodes and edges within a graph.
-    ```jac
-    walker walker_name {
-      can walker_ability with `specific_node entry;
-    }
+  ```jac
+  walker walker_name {
+    can walker_ability with `specific_node entry;
+  }
     ```
 
 - How to get all the visitable nodes from a node/ list of nodes?
