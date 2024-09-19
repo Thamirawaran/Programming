@@ -36,7 +36,7 @@
 
 - How to delete connection between two nodes?
   ```jac
-    node_1 !--> node_2;
+    node_1 del --> node_2;
   ```
 - How to connect list of nodes with single or list of nodes?
 ```jac
@@ -49,7 +49,7 @@
 ```jac
     walker {
         visit [-->];
-        print(here);  # will print the visitable nodes
+        print(here);
 }
 ```
 - How to get all edges that is connected between nodes?
