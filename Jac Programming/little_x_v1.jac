@@ -1,7 +1,7 @@
-import:py from fastapi {FastAPI, HTTPException}
-import:py torch;
-import:py from sklearn.metrics.pairwise {cosine_similarity}
-import:py numpy as np;
+import from fastapi {FastAPI, HTTPException}
+import torch;
+import from sklearn.metrics.pairwise {cosine_similarity}
+import numpy as np;
 
 node User{
     has user_name:str;
@@ -37,7 +37,7 @@ walker follow_request{
     can follow with `root entry{
         follower = &(self.follower_jid);
         followee = &(self.followee_jid);
-        follower +:Following():+> followee;
+        follower +>:Following():+> followee;
         report f"{follower.user_name} is now following {followee.user_name}";
     }
 }
@@ -47,7 +47,7 @@ walker tweet{
     has content:str;
 
     can tweet with `root entry{
-        (poster := &(self.poster_jid)) +:Posting():+> (post := Post(self.content));
+        (poster := &(self.poster_jid)) +>:Posting():+> (post := Post(self.content));
         report f"{poster.user_name} is posting content: {post.content}";
         report post;
     }
@@ -59,8 +59,8 @@ walker comment{
     has content:str;
 
     can comment with `root entry{
-        (poster := &(self.poster_jid)) +:Posting():+> (post := Post(self.content));
-        &(self.post_jid) +:Reply():+> post;
+        (poster := &(self.poster_jid)) +>:Posting():+> (post := Post(self.content));
+        &(self.post_jid) +>:Reply():+> post;
         report f"{poster.user_name} is posting comment: {post.content} on tweet {(&(self.post_jid)).content}";
         report post;
     }
@@ -72,7 +72,7 @@ walker react{
     has reaction:str;
 
     can react with `root entry{
-        (reactor:= &(self.reactor_jid)) +:React(self.reaction):+> &(self.post_jid);
+        (reactor:= &(self.reactor_jid)) +>:React(self.reaction):+> &(self.post_jid);
         report f"{reactor.user_name} is posting reacting {self.reaction} on tweet {(&(self.post_jid)).content}";
     }
 }
@@ -84,7 +84,7 @@ walker search{
     can search with `root entry{
         tweet_array = np.vstack(tweets);
         similarity = cosine_similarity(self.query, tweet_array).flatten();
-        ranked_tweets = sorted(zip(tweets, similarity), key=(with x:int can x), reverse=True);
+        ranked_tweets = sorted(zip(tweets, similarity), key=lambda x:int:x, reverse=True);
         top_tweets = [{"content": tweet.content, "similarity": sim} for (tweet, sim) in ranked_tweets[:5]];
         report top_tweets;
     }
