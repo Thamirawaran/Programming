@@ -1,0 +1,2 @@
+# littleX
+littleX is a simple social media platform prototype developed using the Jac programming language. This platform enables users to interact with one another by following, posting, commenting, and reacting to posts. It simulates social media features through a graph-based data structure with users and posts represented as nodes, and relationships like following, posting, and reacting as edges.
